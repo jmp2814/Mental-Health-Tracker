@@ -6,10 +6,10 @@ class Layout extends React.Component {
     return (
       <>
         <div className="container">
-          <Header />
+      
           <Outlet />
         </div>
-        <Footer />
+    
       </>
     );
   }
