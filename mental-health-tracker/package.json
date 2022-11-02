@@ -1,0 +1,14 @@
+{
+  "name": "mental-health-tracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "cd client/ && npm run lint",
+    "install": "cd server && npm i && cd ../client && npm i"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
