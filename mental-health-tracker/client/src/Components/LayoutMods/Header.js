@@ -14,7 +14,7 @@ class Header extends React.Component {
             </div>
             <div className="col-6 text-center">
               <Link to="/" className="navbar-brand">
-                <img src="" alt="logo" className={`${styles.Logo}`} />
+                <img src="" alt="logo" />
               </Link>
             </div>
             <div className="col-1"></div>
