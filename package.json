@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "cd client/ && npm run lint",
-    "install": "cd server && npm i && cd ../client && npm i"
+    "lint": "cd mental-health-tracker/client/ && npm run lint",
+    "install": "cd mental-health-tracker/server && npm i && cd ../client && npm i"
   },
   "keywords": [],
   "author": "",
