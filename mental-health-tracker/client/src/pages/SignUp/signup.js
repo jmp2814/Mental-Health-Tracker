@@ -1,6 +1,6 @@
 import React, { FormEvent, useState } from "react";
 
-const Login = () => {
+const SignUp = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
@@ -23,7 +23,7 @@ const Login = () => {
           <main className={`w-100 m-auto p-2`}>
             <form onSubmit={handleFormSubmit}>
               <img src="ttb-logos.jpeg" alt="Logo" className={``} />
-              <h1 className="h3 mb-3 fw-normal">Login Here:</h1>
+              <h1 className="h3 mb-3 fw-normal">Sign Up:</h1>
               <div className="form-floating mb-2">
                 <input
                   type="email"
@@ -49,13 +49,12 @@ const Login = () => {
                 <label htmlFor="password">Password:</label>
               </div>
               <button type="submit" className="w-100 btn btn-lg btn-primary">
-                Login
+                Sign Up
               </button>
             </form>
           </main>
         </div>
       );
-    
 };
 
-export default Login;
+export default SignUp;
