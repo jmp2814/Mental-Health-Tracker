@@ -20,6 +20,11 @@ export default function Help() {
                     <a href="https://www.aa-meetings.com/" target="_button">Find A Local AA meeting </a>
                 </div>
             </div>
+            <div class="card">
+                <div class="card-body">
+                    <a href="https://www.narcotics.com/na-meetings/" target="_button">Find A Local NA meeting </a>
+                </div>
+            </div>
         </div>
     );
 
