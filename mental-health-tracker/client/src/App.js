@@ -21,7 +21,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route />
           <Route path="/help" element={<Help />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
