@@ -6,9 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "cd mental-health-tracker/client/ && npm run lint",
-    "install": "cd mental-health-tracker/server && npm i && cd ../client && npm i"
+    "install": "cd mental-health-tracker/server && npm i && cd ../client && npm i",
+    "develop": "concurrently \"cd mental-health-tracker/server && npm run watch\" \"cd mental-health-tracker/client && npm start\""
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^5.1.0"
+  }
 }
