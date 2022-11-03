@@ -15,7 +15,11 @@ export default function Help() {
                     Click below to learn more about 988.
                 </div>
             </div>
-
+            <div class="card">
+                <div class="card-body">
+                    <a href="https://www.aa-meetings.com/" target="_button">Find A Local AA meeting </a>
+                </div>
+            </div>
         </div>
     );
 
