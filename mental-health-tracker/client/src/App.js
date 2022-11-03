@@ -6,8 +6,8 @@ import {
   createHttpLink,
 } from "@apollo/client";
 
-import Home from "./Pages/Home/Home";
-import Help from "./pages/Help";
+
+import Help from "./pages/help/help";
 
 const client = new ApolloClient({
   uri: "/graphql",
@@ -19,7 +19,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route />
           <Route path="/help" element={<Help />} />
         </Routes>
       </Router>
