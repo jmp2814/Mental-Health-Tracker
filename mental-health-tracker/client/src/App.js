@@ -6,9 +6,12 @@ import {
   createHttpLink,
 } from "@apollo/client";
 
-
+// import Home from "./pages/Home/Home";
 import Help from "./pages/help/help";
-import Home from "./pages/home/home";
+import Home from "./pages/home/home"
+import Login from "./pages/Login/login";
+import SignUp from "./pages/SignUp/signup";
+import RecordData from "./pages/Daily/daily";
 
 const client = new ApolloClient({
   uri: "/graphql",
@@ -22,6 +25,9 @@ function App() {
         <Routes>
           <Route path="/home" element={<Home />} />
           <Route path="/help" element={<Help />} />
+          <Route path="/signup" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/todayentry" element={<RecordData />} />
         </Routes>
       </Router>
     </ApolloProvider>
