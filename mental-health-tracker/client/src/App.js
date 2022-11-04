@@ -6,7 +6,7 @@ import {
   createHttpLink,
 } from "@apollo/client";
 
-// import Home from "./pages/Home/Home";
+
 import Help from "./pages/help/help";
 import Home from "./pages/home/home"
 import Login from "./pages/Login/login";
