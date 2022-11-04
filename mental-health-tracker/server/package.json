@@ -4,9 +4,9 @@
   "description": "",
   "main": "server/server.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "node server.js",
         "develop": "concurrently -n server,react \"cd server && npm run watch\" \"cd client && npm start\"",
-    "seed": "cd server && npm run seed",
+    "seed": "node seeders/seed.js",
     "build": "cd client && npm run build"
   },
   "author": "",
