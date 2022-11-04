@@ -10,6 +10,7 @@ import {
 import Help from "./pages/help/help";
 import Home from "./pages/home/home"
 import Login from "./pages/Login/login";
+import Profile from "./pages/profile/profile";
 import SignUp from "./pages/SignUp/signup";
 import RecordData from "./pages/Daily/daily";
 
@@ -24,6 +25,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/home" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/help" element={<Help />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
