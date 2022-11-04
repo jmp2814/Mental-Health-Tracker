@@ -9,6 +9,7 @@ import {
 
 import Help from "./pages/help/help";
 import Home from "./pages/home/home";
+import Profile from "./pages/profile/profile";
 
 const client = new ApolloClient({
   uri: "/graphql",
@@ -21,6 +22,7 @@ function App() {
       <Router>
         <Routes>
           <Route path="/home" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/help" element={<Help />} />
         </Routes>
       </Router>
