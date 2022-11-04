@@ -42,19 +42,21 @@ const recordData = () => {
                         <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"></input>
                     </div>
                 
-                    <div class="form-check">
-                        <label class="form-label">Did you take your medication today?</label>
+                    <div>
+                    <label class="form-label">Did you take your medication today?</label>
+                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></input>
                         <label class="form-check-label" for="flexRadioDefault1">
                           Yes
                         </label>
-                    </div>
+                     </div>
 
-                    <div class="form-check">
+                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"></input>
                         <label class="form-check-label" for="flexRadioDefault2">
                            No
                         </label>
+                     </div>
                     </div>
 
                     <div class="input-group">
