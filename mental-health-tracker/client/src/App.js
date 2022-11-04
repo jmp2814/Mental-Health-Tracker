@@ -10,7 +10,7 @@ import {
 import Help from "./pages/help/help";
 import Login from "./pages/Login/login";
 import SignUp from "./pages/SignUp/signup";
-import recordData from "./pages/Daily/daily";
+import RecordData from "./pages/Daily/daily";
 
 const client = new ApolloClient({
   uri: "/graphql",
@@ -26,7 +26,7 @@ function App() {
           <Route path="/help" element={<Help />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/todayentry" element={<recordData />} />
+          <Route path="/todayentry" element={<RecordData />} />
         </Routes>
       </Router>
     </ApolloProvider>
