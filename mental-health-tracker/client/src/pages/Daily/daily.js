@@ -1,4 +1,5 @@
 import React, { FormEvent, useState } from "react";
+import "./pages/styles.css"
 
 const recordData = () => {
 

@@ -13,6 +13,7 @@ import Login from "./pages/Login/login";
 import Profile from "./pages/profile/profile";
 import SignUp from "./pages/SignUp/signup";
 import RecordData from "./pages/Daily/daily";
+import "./pages/styles.css"
 
 const client = new ApolloClient({
   uri: "/graphql",
