@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import styles from "./Header.module.css";
 
 class Header extends React.Component {
   render() {
@@ -14,7 +15,11 @@ class Header extends React.Component {
             </div>
             <div className="col-6 text-center">
               <Link to="/" className="navbar-brand">
-                <img src="" alt="logo" />
+                <img
+                  src="./Here With You-1.png"
+                  alt="logo"
+                  className={`${styles.Logo}`}
+                />
               </Link>
             </div>
             <div className="col-1"></div>
