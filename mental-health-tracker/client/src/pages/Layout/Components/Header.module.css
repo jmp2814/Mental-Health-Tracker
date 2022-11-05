@@ -3,3 +3,14 @@
   object-fit: cover;
   width: 300px;
 }
+
+.navbar {
+  align-items: center;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  margin-left: 35%;
+  padding-top: 10px;
+}
+
+/* "navbar navbar-expand-lg navbar-light d-flex justify-content-around alight-items-center" */
