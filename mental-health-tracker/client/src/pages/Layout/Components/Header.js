@@ -22,17 +22,17 @@ class Header extends React.Component {
             <Link to="/" className="btn btn-sm btn-outline-secondary">
               Home
             </Link>
-            <Link to="/login" className="btn btn-sm btn-outline-secondary">
-              Login
-            </Link>
-            <Link to="/signup" className="btn btn-sm btn-outline-secondary">
-              Sign Up
-            </Link>
             <Link
               to="/help"
               className="btn btn-sm btn-info btn-outline-secondary"
             >
               Need Help Now
+            </Link>
+            <Link to="/login" className="btn btn-sm btn-outline-secondary">
+              Login
+            </Link>
+            <Link to="/signup" className="btn btn-sm btn-outline-secondary">
+              Sign Up
             </Link>
           </div>
         </header>
