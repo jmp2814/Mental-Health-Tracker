@@ -20,7 +20,7 @@ class Header extends React.Component {
           </div>
           <div className={`${styles.navbar}`}>
             <Link to="/" className="btn btn-sm btn-outline-secondary">
-              Home
+              Sign-Up
             </Link>
             <Link
               to="/help"
@@ -30,9 +30,6 @@ class Header extends React.Component {
             </Link>
             <Link to="/login" className="btn btn-sm btn-outline-secondary">
               Login
-            </Link>
-            <Link to="/signup" className="btn btn-sm btn-outline-secondary">
-              Sign Up
             </Link>
           </div>
         </header>
