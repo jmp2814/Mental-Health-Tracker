@@ -1,8 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Footer from "./Components/Footer";
-import Header from "./Components/Header";
-import "./pages/styles.css"
+import Footer from "./LayoutComponents/Footer";
+import Header from "./LayoutComponents/Header";
 
 class Layout extends React.Component {
   render() {
