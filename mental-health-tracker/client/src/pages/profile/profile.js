@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Chart from "../Components/Chart";
+import LineChart from "../Components/LineChart";
 const date = new Date().toLocaleDateString();
 // const time = new Date().toLocaleTimeString();
 
@@ -42,7 +42,7 @@ export default function Profile() {
       <div class="card">
         <div class="card-body">Graph Place holder</div>
       </div>
-      <Chart />
+      <LineChart />
     </div>
   );
 }
