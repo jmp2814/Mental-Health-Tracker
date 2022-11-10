@@ -1,9 +1,6 @@
-import { useState, useEffect, Component } from 'react';
-import { json } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+
 const QuoteContainer = () => {
-
-
-
     const [quote, setQuote] = useState([])
     // let quote;
     const getQuote = async (query) => {
