@@ -39,7 +39,7 @@ const Login = (props) => {
   };
 
   return (
-    <div className="d-flex align-items-center text-center Box">
+    <div className="d-flex align-items-center text-center Box card w-65">
       <main className={`w-50 m-auto p-2`}>
         <h1 className="h3 mb-3 fw-normal">Login Here:</h1>
         {data ? (
@@ -48,7 +48,7 @@ const Login = (props) => {
           </p>
         ) : (
           <form onSubmit={handleFormSubmit}>
-            <div className="form-floating mb-2">
+            <div className="form-floating mb-2 bg-white">
               <input
                 type="email"
                 value={formState.email}
@@ -60,7 +60,7 @@ const Login = (props) => {
               />
               <label htmlFor="email">Email address:</label>
             </div>
-            <div className="form-floating mb-2">
+            <div className="form-floating mb-2 bg-white">
               <input
                 type="password"
                 value={formState.password}
