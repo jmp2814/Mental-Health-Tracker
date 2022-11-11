@@ -40,7 +40,6 @@ const Login = (props) => {
   return (
     <div className="d-flex align-items-center text-center">
       <main className={`w-100 m-auto p-2`}>
-        <img src="ttb-logos.jpeg" alt="Logo" className={``} />
         <h1 className="h3 mb-3 fw-normal">Login Here:</h1>
         {data ? (
           <p>
