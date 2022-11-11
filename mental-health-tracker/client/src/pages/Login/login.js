@@ -1,5 +1,5 @@
 import React, { FormEvent, useState } from "react";
-// import "./pages/styles.module.css";
+import "./login.module.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -20,8 +20,8 @@ const Login = () => {
   };
 
   return (
-    <div className="d-flex align-items-center text-center">
-      <main className={`w-100 m-auto p-2`}>
+    <div className="d-flex align-items-center text-center Main">
+      <main className={`w-50 m-auto p-2`}>
         <form onSubmit={handleFormSubmit}>
           <h1 className="h3 mb-3 fw-normal">Login Here:</h1>
           <div className="form-floating mb-2">
@@ -48,7 +48,7 @@ const Login = () => {
             />
             <label htmlFor="password">Password:</label>
           </div>
-          <button type="submit" className="w-100 btn btn-lg btn-primary">
+          <button type="submit" className="w-25 btn btn-lg btn-primary">
             Login
           </button>
         </form>
