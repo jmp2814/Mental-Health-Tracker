@@ -10,9 +10,9 @@ const resolvers = {
     responses: async () => {
       return Response.find();
     },
-    // contacts: async () => {
-    //   return Contact.find();
-    // },
+    contacts: async () => {
+      return Contact.find();
+    },
   },
 
   Mutation: {

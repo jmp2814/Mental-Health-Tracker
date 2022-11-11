@@ -19,8 +19,8 @@ class Header extends React.Component {
             </div>
           </div>
           <div className={`${styles.navbar}`}>
-            <Link to="/" className="btn btn-sm btn-outline-secondary">
-              Sign-Up
+            <Link to="signup" className="btn btn-sm btn-outline-secondary">
+              Sign Up
             </Link>
             <Link
               to="/help"

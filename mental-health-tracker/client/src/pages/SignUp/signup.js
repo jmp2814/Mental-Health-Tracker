@@ -3,7 +3,8 @@ import React, { FormEvent, useState } from "react";
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
   const handleEmailChange = (e) => {
     setEmail(e.currentTarget.value);
   };
@@ -12,6 +13,12 @@ const SignUp = () => {
     setPassword(e.currentTarget.value);
   };
 
+  const handleFirstnameChange = (e) => {
+    setFirstname(e.currentTarget.value);
+  };
+  const handleLastnameChange = (e) => {
+    setLastname(e.currentTarget.value);
+  };
   const handleFormSubmit = (e) => {
     e.preventDefault();
     setEmail("");
@@ -22,7 +29,6 @@ const SignUp = () => {
     <div className="d-flex align-items-center text-center">
       <main className={`w-100 m-auto p-2`}>
         <form onSubmit={handleFormSubmit}>
-          <img src="ttb-logos.jpeg" alt="Logo" className={``} />
           <h1 className="h3 mb-3 fw-normal">Sign Up:</h1>
           <div className="form-floating mb-2">
             <input
@@ -48,6 +54,30 @@ const SignUp = () => {
             />
             <label htmlFor="password">Password:</label>
           </div>
+          <div className="form-floating mb-2">
+            <input
+              type="firstname"
+              value={firstname}
+              name="firstname"
+              id="firstname"
+              placeholder="firstname"
+              onChange={handleFirstnameChange}
+              className="form-control"
+            />
+            <label htmlFor="firstname">Firstname:</label>
+          </div>
+          <div className="form-floating mb-2">
+            <input
+              type="lastname"
+              value={lastname}
+              name="lastname"
+              id="lastname"
+              placeholder="lastname"
+              onChange={handleLastnameChange}
+              className="form-control"
+            />
+            <label htmlFor="lastname">Lastname:</label>
+          </div>
           <button type="submit" className="w-100 btn btn-lg btn-primary">
             Sign Up
           </button>
@@ -56,5 +86,4 @@ const SignUp = () => {
     </div>
   );
 };
-
 export default SignUp;
