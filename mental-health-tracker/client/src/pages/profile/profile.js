@@ -1,12 +1,17 @@
 import React, { useEffect, useState } from "react";
 import LineChart from "../Components/LineChart";
+import { Navigate, useParams } from "react-router-dom";
+import Auth from "../../utils/auth";
+import { QUERY_USER, QUERY_ME } from "../../utils/queries";
+import { useQuery } from "@apollo/client";
 const date = new Date().toLocaleDateString();
+
 // const time = new Date().toLocaleTimeString();
 
 export default function Profile() {
   // Store the current date in a useState hook
   // Have a useEffect hook that would get a new date every 1000 ms
-  // Updatge the useState hook
+
   const [time, setTime] = useState(new Date());
 
   useEffect(() => {
@@ -16,6 +21,34 @@ export default function Profile() {
       clearInterval(timer);
     };
   });
+
+  const { id } = useParams();
+
+  const { loading, data, error } = useQuery(id ? QUERY_USER : QUERY_ME, {
+    variables: { id },
+  });
+
+  console.log(data, error);
+  const user = data?.me || data?.user || {};
+  // navigate to personal profile page if username is yours
+  if (!Auth.loggedIn()) {
+    return <Navigate to="/home" />;
+  }
+
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+  console.log(user);
+
+  if (!user?.email) {
+    return (
+      <h4>
+        You need to be logged in to see this. Use the navigation links above to
+        sign up or log in!
+      </h4>
+    );
+  }
+
   return (
     <div>
       <h1>Profile</h1>
