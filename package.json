@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "cd mental-health-tracker/client/ && npm run lint",
     "install": "cd mental-health-tracker/server && npm i && cd ../client && npm i",
-    "develop": "concurrently \"cd mental-health-tracker/server && npm run watch\" \"cd mental-health-tracker/client && npm start\""
+    "develop": "concurrently \"cd mental-health-tracker/server && npm start\" \"cd mental-health-tracker/client && npm start\"",
+    "seed": "cd mental-health-tracker/server && npm run seed"
   },
   "keywords": [],
   "author": "",
