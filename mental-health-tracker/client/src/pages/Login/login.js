@@ -39,7 +39,7 @@ const Login = (props) => {
   };
 
   return (
-    <div className="d-flex align-items-center text-center Main">
+    <div className="d-flex align-items-center text-center Box">
       <main className={`w-50 m-auto p-2`}>
         <h1 className="h3 mb-3 fw-normal">Login Here:</h1>
         {data ? (
