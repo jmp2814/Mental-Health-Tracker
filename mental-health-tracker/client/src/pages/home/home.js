@@ -1,6 +1,5 @@
 import React from "react";
 import QuoteContainer from "../Components/quote";
-import "./pages/styles.css";
 
 export default function Home() {
   return (

@@ -1,5 +1,5 @@
 import React, { FormEvent, useState } from "react";
-import styles from "../../pages/styles.module.css";
+// import styles from "../../pages/styles.module.css";
 
 const recordData = () => {
   const handleFormSubmit = (e) => {

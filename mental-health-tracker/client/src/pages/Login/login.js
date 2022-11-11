@@ -1,5 +1,5 @@
 import React, { FormEvent, useState } from "react";
-import "./pages/styles.module.css";
+// import "./pages/styles.module.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -23,7 +23,6 @@ const Login = () => {
     <div className="d-flex align-items-center text-center">
       <main className={`w-100 m-auto p-2`}>
         <form onSubmit={handleFormSubmit}>
-          <img src="ttb-logos.jpeg" alt="Logo" className={``} />
           <h1 className="h3 mb-3 fw-normal">Login Here:</h1>
           <div className="form-floating mb-2">
             <input

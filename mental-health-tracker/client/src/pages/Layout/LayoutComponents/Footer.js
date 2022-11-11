@@ -5,12 +5,8 @@ class Footer extends React.Component {
   render() {
     return (
       <>
-        <footer className="text-center bg-dark mt-5 flex-grow-0 flex-shrink-0">
-          <img
-            src="./Here With You-1.png"
-            alt="logo"
-            className={`${styles.Logo}`}
-          />
+        <footer className="text-center mt-5 flex-grow-0 flex-shrink-0">
+          <img src="./HWYAbrvtd5.png" alt="logo" className={`${styles.Logo}`} />
         </footer>
       </>
     );
