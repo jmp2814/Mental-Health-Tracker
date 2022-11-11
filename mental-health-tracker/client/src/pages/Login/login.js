@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Navigate } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../../utils/mutations";
 import Auth from "../../utils/auth";
@@ -38,6 +38,9 @@ const Login = (props) => {
     });
   };
 
+  if (data) {
+    return <Navigate to="/profile" />;
+  }
   return (
     <div className="d-flex align-items-center text-center Box card w-65">
       <main className={`w-50 m-auto p-2`}>

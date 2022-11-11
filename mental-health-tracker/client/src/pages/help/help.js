@@ -25,6 +25,11 @@ export default function Help() {
                     <a href="https://www.narcotics.com/na-meetings/" target="_button">Find A Local NA meeting </a>
                 </div>
             </div>
+            <div className="card">
+                <div className="card-body">
+                    <a href="https://www.lgbthotline.org/" target="_button">LGBT National Help Center</a>
+                </div>
+            </div>
         </div>
     );
 
