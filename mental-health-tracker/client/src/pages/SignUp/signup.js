@@ -26,8 +26,8 @@ const SignUp = () => {
   };
 
   return (
-    <div className="d-flex align-items-center text-center">
-      <main className={`w-100 m-auto p-2`}>
+    <div className="d-flex align-items-center text-center card mt-2 mb-3 pt-3 pb-3 w-100">
+      <main className={`w-50 m-auto p-2`}>
         <form onSubmit={handleFormSubmit}>
           <h1 className="h3 mb-3 fw-normal">Sign Up:</h1>
           <div className="form-floating mb-2">
@@ -64,7 +64,7 @@ const SignUp = () => {
               onChange={handleFirstnameChange}
               className="form-control"
             />
-            <label htmlFor="firstname">Firstname:</label>
+            <label htmlFor="firstname">First Name:</label>
           </div>
           <div className="form-floating mb-2">
             <input
@@ -76,9 +76,9 @@ const SignUp = () => {
               onChange={handleLastnameChange}
               className="form-control"
             />
-            <label htmlFor="lastname">Lastname:</label>
+            <label htmlFor="lastname">Last Name:</label>
           </div>
-          <button type="submit" className="w-100 btn btn-lg btn-primary">
+          <button type="submit" className="w-25 btn btn-lg btn-success">
             Sign Up
           </button>
         </form>
