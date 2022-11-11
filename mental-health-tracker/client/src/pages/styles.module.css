@@ -1,4 +1,7 @@
 :root {
-    --bg: #539D8B,
-    --accent: #F5C5BE,
+    --bs-body-bg: #539D8B;
+  }
+
+.bg-color {
+    background-color: #539D8B;
 }

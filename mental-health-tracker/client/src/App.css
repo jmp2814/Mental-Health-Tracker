@@ -1,6 +1,14 @@
+:root {
+  --bs-body-bg: #539D8B;
+}
 
 .App {
   text-align: center;
+}
+
+body {
+  background-color: #539D8B;
+
 }
 
 .App-logo {
@@ -26,7 +34,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #539D8B;
 }
 
 @keyframes App-logo-spin {

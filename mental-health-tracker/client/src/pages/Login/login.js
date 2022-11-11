@@ -3,6 +3,7 @@ import { Link, Navigate } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../../utils/mutations";
 import Auth from "../../utils/auth";
+import "./login.module.css";
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: "", password: "" });
@@ -41,8 +42,8 @@ const Login = (props) => {
     return <Navigate to="/profile" />;
   }
   return (
-    <div className="d-flex align-items-center text-center">
-      <main className={`w-100 m-auto p-2`}>
+    <div className="d-flex align-items-center text-center Box card w-55 mt-3 pt-3 pb-3">
+      <main className={`w-50 m-auto p-2`}>
         <h1 className="h3 mb-3 fw-normal">Login Here:</h1>
         {data ? (
           <p>
@@ -50,7 +51,7 @@ const Login = (props) => {
           </p>
         ) : (
           <form onSubmit={handleFormSubmit}>
-            <div className="form-floating mb-2">
+            <div className="form-floating mb-2 bg-white">
               <input
                 type="email"
                 value={formState.email}
@@ -62,7 +63,7 @@ const Login = (props) => {
               />
               <label htmlFor="email">Email address:</label>
             </div>
-            <div className="form-floating mb-2">
+            <div className="form-floating mb-2 bg-white">
               <input
                 type="password"
                 value={formState.password}
@@ -74,7 +75,7 @@ const Login = (props) => {
               />
               <label htmlFor="password">Password:</label>
             </div>
-            <button type="submit" className="w-100 btn btn-lg btn-primary">
+            <button type="submit" className="w-25 btn btn-lg btn-success">
               Login
             </button>
           </form>
