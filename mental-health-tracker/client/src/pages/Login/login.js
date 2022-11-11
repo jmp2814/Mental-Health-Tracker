@@ -42,7 +42,7 @@ const Login = (props) => {
     return <Navigate to="/profile" />;
   }
   return (
-    <div className="d-flex align-items-center text-center Box card w-55 mt-3 pt-3 pb-3">
+    <div className="d-flex align-items-center text-center Box card w-50 mt-3 pt-3 pb-3">
       <main className={`w-50 m-auto p-2`}>
         <h1 className="h3 mb-3 fw-normal">Login Here:</h1>
         {data ? (
