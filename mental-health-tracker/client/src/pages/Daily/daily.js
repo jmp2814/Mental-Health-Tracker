@@ -1,5 +1,4 @@
 import React, { FormEvent, useState } from "react";
-// import styles from "../../pages/styles.module.css";
 
 const recordData = () => {
   const handleFormSubmit = (e) => {
@@ -7,7 +6,7 @@ const recordData = () => {
   };
 
   return (
-    <div>
+    <div className="d-flex align-items-center text-center card w-50 mt-2 mb-3 pt-3 pb3">
       <main className={"w-100 m-auto p-2"}>
         <form onSubmit={handleFormSubmit}>
           <div>
