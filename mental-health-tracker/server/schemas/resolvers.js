@@ -7,8 +7,9 @@ const resolvers = {
     user: async (parent, args) => {
       return User.findById(args.id).populate("responses").populate("contacts");
     },
-    responses: async () => {
-      return Response.find();
+    responses: async (parent, { email }) => {
+      const params = email ? { email } : {};
+      return Response.find(params).sort({ createdAt: -1 });
     },
     contacts: async () => {
       return Contact.find();

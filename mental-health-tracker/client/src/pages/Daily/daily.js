@@ -13,21 +13,24 @@ const EntryForm = () => {
   const [appetite, setAppetite] = useState(3);
   const [sleep, setSleep] = useState(0);
   const [medication, setMedication] = useState("");
+  const [notes, setNotes] = useState("");
 
-  const [addResponse, { error }] = useMutation(ADD_RESPONSE, {
-    update(cache, { data: { addResponse } }) {
-      try {
-        const { responses } = cache.readQuery({ query: QUERY_RESPONSES });
+  // const [addResponse, { error }] = useMutation(ADD_RESPONSE, {
+  //   update(cache, { data: { addResponse } }) {
+  //     try {
+  //       const { responses } = cache.readQuery({ query: QUERY_RESPONSES });
 
-        cache.writeQuery({
-          query: QUERY_RESPONSES,
-          data: { responses: [addResponse, ...responses] },
-        });
-      } catch (e) {
-        console.error(e);
-      }
-    },
-  });
+  //       cache.writeQuery({
+  //         query: QUERY_RESPONSES,
+  //         data: { responses: [addResponse, ...responses] },
+  //       });
+  //     } catch (e) {
+  //       console.error(e);
+  //     }
+  //   },
+  // });
+
+  const [addResponse, { error }] = useMutation(ADD_RESPONSE);
 
   const recordData = (event) => {
     const { name, value } = event.target;
@@ -39,6 +42,7 @@ const EntryForm = () => {
     setAppetite(value.appetite);
     setSleep(value.sleep);
     setMedication(value.medication);
+    setNotes(value.notes);
   };
 
   const handleFormSubmit = async (event) => {
@@ -54,6 +58,7 @@ const EntryForm = () => {
           appetite,
           sleep,
           medication,
+          notes,
         },
       });
 
@@ -64,6 +69,7 @@ const EntryForm = () => {
       setAppetite("");
       setSleep("");
       setMedication("");
+      setNotes("");
     } catch (err) {
       console.error(err);
     }
@@ -190,6 +196,8 @@ const EntryForm = () => {
 
             <div class="form-check">
               <input
+                value={medication}
+                onChange={recordData}
                 class="form-check-input"
                 type="radio"
                 name="flexRadioDefault"
@@ -207,6 +215,8 @@ const EntryForm = () => {
           <div class="input-group">
             <span class="input-group-text ">Notes:</span>
             <textarea
+              value={notes}
+              onChange={recordData}
               class="form-control"
               aria-label="With textarea"
             ></textarea>
