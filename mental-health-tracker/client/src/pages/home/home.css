@@ -3,7 +3,7 @@
 };
 
 .Title-Font {
-    font-family: "Caveat";
+    font-family: "Caveat" !important;
 }
 
 @font-face {
