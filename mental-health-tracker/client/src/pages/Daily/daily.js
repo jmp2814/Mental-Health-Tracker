@@ -1,6 +1,7 @@
 import { useMutation } from "@apollo/client";
-import React, { FormEvent, useState } from "react";
+import React, { useState } from "react";
 import { ADD_RESPONSE } from "../../utils/mutations";
+import { QUERY_RESPONSES } from "../../utils/queries";
 import "../fonts/Nunito_Sans/NunitoSans-Regular.ttf";
 import "./daily.css";
 
@@ -12,7 +13,21 @@ const EntryForm = () => {
   const [appetite, setAppetite] = useState(3);
   const [sleep, setSleep] = useState(0);
   const [medication, setMedication] = useState("");
-  const [addResponse, { error, data }] = useMutation(ADD_RESPONSE);
+
+  const [addResponse, { error }] = useMutation(ADD_RESPONSE, {
+    update(cache, { data: { addResponse } }) {
+      try {
+        const { responses } = cache.readQuery({ query: QUERY_RESPONSES });
+
+        cache.writeQuery({
+          query: QUERY_RESPONSES,
+          data: { responses: [addResponse, ...responses] },
+        });
+      } catch (e) {
+        console.error(e);
+      }
+    },
+  });
 
   const recordData = (event) => {
     const { name, value } = event.target;
@@ -32,15 +47,23 @@ const EntryForm = () => {
     try {
       const { data } = await addResponse({
         variables: {
-          depressionScale: depression,
-          happyScale: happy,
-          anxiousScale: anxiety,
-          irritableScale: irritable,
-          appetiteScale: appetite,
-          sleepHours: sleep,
-          medicationCheck: medication,
+          depression,
+          happy,
+          anxiety,
+          irritable,
+          appetite,
+          sleep,
+          medication,
         },
       });
+
+      setDepression("");
+      setHappy("");
+      setAnxiety("");
+      setIrritable("");
+      setAppetite("");
+      setSleep("");
+      setMedication("");
     } catch (err) {
       console.error(err);
     }
@@ -188,6 +211,10 @@ const EntryForm = () => {
               aria-label="With textarea"
             ></textarea>
           </div>
+
+          <button type="submit" className="w-10 btn btn-lg btn-success">
+            Submit
+          </button>
         </form>
       </main>
     </div>
