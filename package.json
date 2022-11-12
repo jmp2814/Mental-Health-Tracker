@@ -8,7 +8,8 @@
     "lint": "cd mental-health-tracker/client/ && npm run lint",
     "install": "cd mental-health-tracker/server && npm i && cd ../client && npm i",
     "develop": "concurrently \"cd mental-health-tracker/server && npm start\" \"cd mental-health-tracker/client && npm start\"",
-    "start": "concurrently \"cd mental-health-tracker/server && npm start\" \"cd mental-health-tracker/client && npm start\"",
+    "build": "cd mental-health-tracker/client && npm run build",
+    "start": "node mental-health-tracker/server/server.js",
     "seed": "cd mental-health-tracker/server && npm run seed"
   },
   "keywords": [],
