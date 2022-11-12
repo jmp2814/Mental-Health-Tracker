@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import LineChart from "../Components/LineChart";
 import { Navigate, useParams } from "react-router-dom";
 import Auth from "../../utils/auth";
-import { QUERY_USER, QUERY_ME } from "../../utils/queries";
+import { QUERY_USER, QUERY_ME, QUERY_STATS } from "../../utils/queries";
 import { useQuery } from "@apollo/client";
 const date = new Date().toLocaleDateString();
 
@@ -75,7 +74,16 @@ export default function Profile() {
       <div class="card">
         <div class="card-body">Graph Place holder</div>
       </div>
-      <LineChart />
+      <div>
+        <ul>
+          <li>Depression: {user.responses[0].depressionScale}</li>
+          <li>Happiness: {user.responses[0].happyScale}</li>
+          <li>Anxiety: {user.responses[0].anxiousScale}</li>
+          <li>Irritation: {user.responses[0].irritableScale}</li>
+          <li>Energy: {user.responses[0].energeticScale}</li>
+          <li>Sleep: {user.responses[0].sleepHours}</li>
+        </ul>
+      </div>
     </div>
   );
 }

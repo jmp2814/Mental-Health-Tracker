@@ -1,24 +1,24 @@
 [
-    {
-        "depressionScale": 1,
-        "happyScale": 3,
-        "anxiousScale": 2,
-        "irritableScale": 2,
-        "energeticScale": 4,
-        "appetiteScale": 3,
-        "sleepHours": 8,
-        "medicationCheck": "Yes",
-        "notesCheck": "Yesterday was a pretty good day"
-    },
-    {
-        "depressionScale": 4,
-        "happyScale": 2,
-        "anxiousScale": 4,
-        "irritableScale": 5,
-        "energeticScale": 3,
-        "appetiteScale": 2,
-        "sleepHours": 11,
-        "medicationCheck": "No",
-        "notesCheck": "Yesterday was a pretty bad day"
-    }
+  {
+    "depressionScale": 1,
+    "happyScale": 3,
+    "anxiousScale": 2,
+    "irritableScale": 2,
+    "energeticScale": 4,
+    "appetiteScale": 3,
+    "sleepHours": 8,
+    "medicationCheck": "Yes",
+    "notesCheck": "Yesterday was a pretty good day"
+  },
+  {
+    "depressionScale": 4,
+    "happyScale": 2,
+    "anxiousScale": 4,
+    "irritableScale": 5,
+    "energeticScale": 3,
+    "appetiteScale": 2,
+    "sleepHours": 11,
+    "medicationCheck": "No",
+    "notesCheck": "Yesterday was a pretty bad day"
+  }
 ]
