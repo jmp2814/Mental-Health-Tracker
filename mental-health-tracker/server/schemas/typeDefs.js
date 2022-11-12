@@ -23,6 +23,7 @@ const typeDefs = gql`
     medicationCheck: String
     notesCheck: String
     createdAt: String
+    email: String
   }
 
   type Contact {
@@ -41,7 +42,7 @@ const typeDefs = gql`
 
   type Query {
     user(id: ID!): User!
-    responses: [Response]
+    responses(email: String): [Response]
     contacts: [Contact]
     me: User
   }
@@ -70,6 +71,7 @@ const typeDefs = gql`
       sleepHours: Int!
       medicationCheck: String!
       notesCheck: String!
+      email: String!
     ): Response
     addContact(
       firstName: String!
