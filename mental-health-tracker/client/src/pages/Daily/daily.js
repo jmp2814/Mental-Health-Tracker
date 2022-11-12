@@ -147,7 +147,7 @@ const EntryForm = () => {
             ></input>
           </div>
 
-          <div>
+          <div class="container w-75">
             <label class="form-label">
               Did you take your medication today?
             </label>
@@ -160,7 +160,7 @@ const EntryForm = () => {
                 name="flexRadioDefault"
                 id="flexRadioDefault1"
               ></input>
-              <label class="form-check-label" for="flexRadioDefault1">
+              <label class="form-check-label w-25" for="flexRadioDefault1">
                 Yes
               </label>
             </div>
@@ -172,14 +172,17 @@ const EntryForm = () => {
                 name="flexRadioDefault"
                 id="flexRadioDefault2"
               ></input>
-              <label class="form-check-label" for="flexRadioDefault2">
+              <label
+                class="form-check-label text-start ps-1"
+                for="flexRadioDefault2"
+              >
                 No
               </label>
             </div>
           </div>
 
           <div class="input-group">
-            <span class="input-group-text">Notes:</span>
+            <span class="input-group-text ">Notes:</span>
             <textarea
               class="form-control"
               aria-label="With textarea"

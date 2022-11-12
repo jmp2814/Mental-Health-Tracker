@@ -5,3 +5,8 @@
 .bg-color {
     background-color: #539D8B;
 }
+
+@font-face {
+  font-family: "Caveat";
+  src: url("./fonts/Caveat/static/Caveat-Bold.ttf");
+}
