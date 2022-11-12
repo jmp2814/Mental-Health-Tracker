@@ -2,6 +2,21 @@
   --bs-body-bg: #539D8B;
 }
 
+@font-face {
+  font-family: "Light";
+  src: url("./public/fonts/Nunito_Sans/NunitoSans-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/Nunito_Sans/NunitoSans-Regular.ttf");
+};
+
+@font-face {
+  font-family: "Caveat";
+  src: url("../fonts/Caveat/static/Caveat-Bold.ttf");
+}
+
 .App {
   text-align: center;
 }

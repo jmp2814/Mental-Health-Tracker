@@ -28,7 +28,7 @@ class Header extends React.Component {
             <Link to="/today" className="btn btn-sm bg-light">
               Entry List
             </Link>
-            <Link to="/help" className="btn btn-sm bg-danger btn-outline-light">
+            <Link to="/help" className="btn bg-danger text">
               Need Help Now
             </Link>
             <Link to="/login" className="btn btn-sm bg-light">

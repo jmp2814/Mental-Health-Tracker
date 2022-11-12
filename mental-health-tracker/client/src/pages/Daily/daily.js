@@ -2,6 +2,8 @@ import { useMutation } from "@apollo/client";
 import React, { useState } from "react";
 import { ADD_RESPONSE } from "../../utils/mutations";
 import { QUERY_RESPONSES } from "../../utils/queries";
+import "../fonts/Nunito_Sans/NunitoSans-Regular.ttf";
+import "./daily.css";
 
 const EntryForm = () => {
   const [depression, setDepression] = useState(3);
@@ -68,11 +70,11 @@ const EntryForm = () => {
   };
 
   return (
-    <div className="d-flex align-items-center text-center card w-100 mt-2 mb-3 pt-3 pb3">
+    <div className="d-flex align-items-center text-center card w-100 mt-2 mb-3 pt-3 pb3 Standard-Font">
       <main className={"w-50 m-auto p-2"}>
         <form onSubmit={handleFormSubmit}>
           <div>
-            <label for="customRange1" class="form-label">
+            <label for="customRange1" class="form-label Standard-Font">
               How depressed did you feel today?
             </label>
             <input
@@ -151,11 +153,11 @@ const EntryForm = () => {
             ></input>
           </div>
 
-          <div class="input-group input-group-sm mb-3">
+          <div class="input-group input-group-sm mb-3 mt-3 ps-3">
             <label class="form-label">
               How many hours did you sleep last night?
             </label>
-            <span class="input-group-text" id="inputGroup-sizing-sm">
+            <span class="input-group-text" id="inputGroup-sizing-sm w-10 ps-3">
               Hours:
             </span>
             <input
@@ -168,7 +170,7 @@ const EntryForm = () => {
             ></input>
           </div>
 
-          <div>
+          <div class="container w-75">
             <label class="form-label">
               Did you take your medication today?
             </label>
@@ -181,7 +183,7 @@ const EntryForm = () => {
                 name="flexRadioDefault"
                 id="flexRadioDefault1"
               ></input>
-              <label class="form-check-label" for="flexRadioDefault1">
+              <label class="form-check-label w-25" for="flexRadioDefault1">
                 Yes
               </label>
             </div>
@@ -193,14 +195,17 @@ const EntryForm = () => {
                 name="flexRadioDefault"
                 id="flexRadioDefault2"
               ></input>
-              <label class="form-check-label" for="flexRadioDefault2">
+              <label
+                class="form-check-label text-start ps-1"
+                for="flexRadioDefault2"
+              >
                 No
               </label>
             </div>
           </div>
 
           <div class="input-group">
-            <span class="input-group-text">Notes:</span>
+            <span class="input-group-text ">Notes:</span>
             <textarea
               class="form-control"
               aria-label="With textarea"

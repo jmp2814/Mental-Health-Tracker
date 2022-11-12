@@ -3,6 +3,8 @@ import { Link, Navigate } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { ADD_USER } from "../../utils/mutations";
 import Auth from "../../utils/auth";
+import "./signup.css";
+import "../fonts/Nunito_Sans/NunitoSans-Regular.ttf";
 
 const Signup = () => {
   const [formState, setFormState] = useState({
@@ -53,8 +55,8 @@ const Signup = () => {
   //   return <Navigate to="/login" />;
   // }
   return (
-    <div className="d-flex align-items-center text-center">
-      <main className={`w-100 m-auto p-2`}>
+    <div className="d-flex align-items-center text-center Standard-Font container card w-75 mt-3 pt-3 pb-3 mb-3">
+      <main className={`w-50 m-auto p-2`}>
         {data ? (
           <p>
             Success! You may now head <Link to="/">back to the homepage.</Link>
@@ -96,7 +98,7 @@ const Signup = () => {
                 onChange={handleChange}
                 className="form-control"
               />
-              <label htmlFor="firstname">Firstname:</label>
+              <label htmlFor="firstname">First Name:</label>
             </div>
             <div className="form-floating mb-2">
               <input
@@ -108,10 +110,10 @@ const Signup = () => {
                 onChange={handleChange}
                 className="form-control"
               />
-              <label htmlFor="lastname">Lastname:</label>
+              <label htmlFor="lastname">Last Name:</label>
             </div>
-            <button type="submit" className="w-100 btn btn-lg btn-primary">
-              Sign Up
+            <button type="submit" className="w-25 btn btn-lg btn-success">
+              Submit
             </button>
           </form>
         )}
