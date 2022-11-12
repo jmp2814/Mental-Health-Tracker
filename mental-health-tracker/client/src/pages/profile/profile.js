@@ -3,7 +3,25 @@ import { Navigate, useParams } from "react-router-dom";
 import Auth from "../../utils/auth";
 import { QUERY_USER, QUERY_ME, QUERY_STATS } from "../../utils/queries";
 import { useQuery } from "@apollo/client";
+
 const date = new Date().toLocaleDateString();
+
+function moodConvert(num) {
+  let result;
+
+  if (num === 5) {
+    result = "very";
+  } else if (num === 4) {
+    result = "quite";
+  } else if (num === 3) {
+    result = "somewhat";
+  } else if (num === 2) {
+    result = "a little bit";
+  } else {
+    result = "not very";
+  }
+  return result;
+}
 
 // const time = new Date().toLocaleTimeString();
 
@@ -72,17 +90,31 @@ export default function Profile() {
         <div class="card-body">edit/delete Contact</div>
       </div>
       <div class="card">
-        <div class="card-body">Graph Place holder</div>
-      </div>
-      <div>
-        <ul>
-          <li>Depression: {user.responses[0].depressionScale}</li>
-          <li>Happiness: {user.responses[0].happyScale}</li>
-          <li>Anxiety: {user.responses[0].anxiousScale}</li>
-          <li>Irritation: {user.responses[0].irritableScale}</li>
-          <li>Energy: {user.responses[0].energeticScale}</li>
-          <li>Sleep: {user.responses[0].sleepHours}</li>
-        </ul>
+        <div class="d-flex justify-content-center" id="list-wrapper">
+          <ul className="list-unstyled">
+            <li>
+              You have been {moodConvert(user.responses[0].depressionScale)}{" "}
+              depressed lately.{" "}
+            </li>
+            <li>
+              You have been {moodConvert(user.responses[0].happyScale)} happy
+              lately.
+            </li>
+            <li>
+              You have been {moodConvert(user.responses[0].anxiousScale)}{" "}
+              anxious lately.
+            </li>
+            <li>
+              You have been {moodConvert(user.responses[0].irritableScale)}{" "}
+              irritable lately.
+            </li>
+            <li>
+              You have been {moodConvert(user.responses[0].energeticScale)}{" "}
+              energetic lately.
+            </li>
+            <li>You slept {user.responses[0].sleepHours} hours last night.</li>
+          </ul>
+        </div>
       </div>
     </div>
   );
