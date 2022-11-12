@@ -3,15 +3,18 @@ import React from "react";
 export default function Help() {
   return (
     <div className="card d-flex align-items-center text-center w-70 mt-3 pt-3 pb-3">
-      <h1 className="mb-3">Need Help </h1>
+      <h1 className="mb-3">Resources:</h1>
 
       <div className="">
-        <div className="mb-3 ms-3">
-          The 988 Lifeline 988 is now active across the United States. This new,
-          shorter phone number will make it easier for people to remember and
-          access mental health crisis services. (Please note, the previous
-          1-800-273-TALK (8255) number will continue to function indefinitely.)
-          Click below to learn more about 988.
+        <div className="mb-3 ms-3 ps-3">
+          <p>
+            The National Suicide Prevention Lifeline is now 988. Simply dial to
+            get on the line with someone willing to help.{" "}
+          </p>
+          <b>
+            Remember: You are loved. You are important. You are going to be
+            okay. We're with you.
+          </b>
         </div>
       </div>
       <div className="">
