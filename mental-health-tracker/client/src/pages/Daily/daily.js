@@ -79,11 +79,11 @@ const recordData = () => {
             ></input>
           </div>
 
-          <div class="input-group input-group-sm mb-3">
+          <div class="input-group input-group-sm mb-3 mt-3 ps-3">
             <label class="form-label">
               How many hours did you sleep last night?
             </label>
-            <span class="input-group-text" id="inputGroup-sizing-sm">
+            <span class="input-group-text" id="inputGroup-sizing-sm w-10 ps-3">
               Hours:
             </span>
             <input

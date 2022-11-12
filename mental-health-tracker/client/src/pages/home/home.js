@@ -3,24 +3,35 @@ import QuoteContainer from "../Components/quote";
 
 export default function Home() {
   return (
-    <div>
-      <h1>Mental Health Tracker</h1>
-      <div className="card">
-        <div className="card-body">app discription/ intro text</div>
+    <div className="d-flex align-items-center text-center Box card w-100 mt-3 pt-3 pb-3">
+      <h1>Here With You</h1>
+      <h3>Mental Health Tracking</h3>
+      <div className="">
+        <div className="">
+          Know that you're not alone and keep better track of your mental
+          health!{" "}
+        </div>
       </div>
 
-      <div className="card">
-        <div className="card-body">
+      <div className="">
+        <div className="">
           <QuoteContainer />
         </div>
       </div>
-      <div className="card">
-        <div className="card-body">
+      <div className="">
+        <div className="">
           <QuoteContainer />
         </div>
       </div>
-      <div className="card">
-        <div className="card-body">how it works</div>
+      <div className="">
+        <div className="w-50 ">
+          <h3 className="col-12">How it works:</h3>
+          <p className="col-12">
+            Each day you log in, you will be prompted to answer a few questions
+            about your mood. Do this each and every day and you'll soon have
+            data you can share with your care team!
+          </p>
+        </div>
       </div>
     </div>
   );
