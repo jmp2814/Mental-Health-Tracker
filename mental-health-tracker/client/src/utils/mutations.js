@@ -38,7 +38,7 @@ export const ADD_USER = gql`
 `;
 
 export const ADD_RESPONSE = gql`
-  mutation AddResponse(
+  mutation addResponse(
     $depressionScale: Int!
     $happyScale: Int!
     $anxiousScale: Int!
