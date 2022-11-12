@@ -1,0 +1,8 @@
+.Standard-Font {
+    font-family: "Nunito";
+};
+
+@font-face {
+    font-family: "Nunito";
+    src: url(../fonts/Nunito_Sans/NunitoSans-Regular.ttf);
+};

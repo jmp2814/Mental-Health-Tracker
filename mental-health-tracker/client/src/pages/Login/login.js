@@ -4,6 +4,7 @@ import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../../utils/mutations";
 import Auth from "../../utils/auth";
 import "./login.module.css";
+import "../fonts/Nunito_Sans/NunitoSans-Regular.ttf";
 
 const Login = (props) => {
   const [formState, setFormState] = useState({ email: "", password: "" });
@@ -51,7 +52,7 @@ const Login = (props) => {
   //   return <Navigate to="/profile" />;
   // }
   return (
-    <div className="d-flex align-items-center text-center Box card w-100 mt-3 pt-3 pb-3">
+    <div className="d-flex align-items-center container Standard-Font text-center Box card w-75 mt-3 pt-3 pb-3">
       <main className={`w-50 m-auto p-2`}>
         <h1 className="h3 mb-3 fw-normal">Login Here:</h1>
         {data ? (

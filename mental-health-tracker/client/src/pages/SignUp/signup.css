@@ -1,8 +1,3 @@
-.Box {
-    padding: 300px;
-    background-color: #FFF8EB !important;
-}
-
 .Standard-Font {
     font-family: "Nunito";
 };
@@ -11,3 +6,4 @@
     font-family: "Nunito";
     src: url("../fonts/Nunito_Sans/NunitoSans-Regular.ttf");
 };
+

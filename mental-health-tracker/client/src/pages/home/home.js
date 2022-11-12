@@ -1,10 +1,13 @@
 import React from "react";
 import QuoteContainer from "../Components/quote";
+import "./home.css";
+import "../fonts/Nunito_Sans/NunitoSans-Regular.ttf";
+import "../fonts/Caveat/static/Caveat-Bold.ttf";
 
 export default function Home() {
   return (
-    <div className="d-flex align-items-center text-center Box card w-100 mt-3 pt-3 pb-3">
-      <h1>Here With You</h1>
+    <div className="d-flex align-items-center text-center Box card w-75 mt-3 pt-3 pb-3 Standard-Font container">
+      <h1 className="Title-Font">Here With You</h1>
       <h3>Mental Health Tracking</h3>
       <div className="">
         <div className="">
@@ -17,11 +20,6 @@ export default function Home() {
         <img src="./hugging.jpg" alt="people hugging"></img>
       </div>
 
-      <div className="">
-        <div className="">
-          <QuoteContainer />
-        </div>
-      </div>
       <div className="">
         <div className="">
           <QuoteContainer />

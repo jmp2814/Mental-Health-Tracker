@@ -1,13 +1,17 @@
-.Box {
-    padding: 300px;
-    background-color: #FFF8EB !important;
-}
-
 .Standard-Font {
     font-family: "Nunito";
 };
+
+.Title-Font {
+    font-family: "Caveat";
+}
 
 @font-face {
     font-family: "Nunito";
     src: url("../fonts/Nunito_Sans/NunitoSans-Regular.ttf");
 };
+
+@font-face {
+    font-family: "Caveat";
+    src: url("../fonts/Caveat/static/Caveat-Bold.ttf");
+}
