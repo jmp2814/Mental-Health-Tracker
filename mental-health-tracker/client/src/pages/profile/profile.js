@@ -3,6 +3,7 @@ import { Navigate, useParams } from "react-router-dom";
 import Auth from "../../utils/auth";
 import { QUERY_USER, QUERY_ME, QUERY_STATS } from "../../utils/queries";
 import { useQuery } from "@apollo/client";
+import QuoteContainer from "../Components/quote";
 
 const date = new Date().toLocaleDateString();
 
@@ -67,31 +68,18 @@ export default function Profile() {
   }
 
   return (
-    <div>
-      <h1>Profile</h1>
-      <div class="card">
-        <div class="card-body">
+    <div className="card container text-center d-flex card w-75 mt-2 mb-3 pt-3 pb3 Standard-Font">
+      <h1>Mental Health Summary</h1>
+      <div class="">
+        <div class="">
           <>
-            <p>Today's is {date}</p>
-            <p>The time is {time.toLocaleTimeString()}</p>
+            <p>Today's date is {date}.</p>
           </>
         </div>
       </div>
-      <div class="card">
-        <div class="card-body">Make an Entry</div>
-      </div>
-      <div class="card">
-        <div class="card-body">click to add contact</div>
-      </div>
-      <div class="card">
-        <div class="card-body">edit/delete Enrty</div>
-      </div>
-      <div class="card">
-        <div class="card-body">edit/delete Contact</div>
-      </div>
-      <div class="card">
+      <div class="">
         <div class="d-flex justify-content-center" id="list-wrapper">
-          <ul className="list-unstyled">
+          <ul className="list-unstyled mb-3 pb-3 fs-5">
             <li>
               You have been {moodConvert(user.responses[0].depressionScale)}{" "}
               depressed lately.{" "}
@@ -114,6 +102,10 @@ export default function Profile() {
             </li>
             <li>You slept {user.responses[0].sleepHours} hours last night.</li>
           </ul>
+        </div>
+
+        <div className=" mb-3 mt-3 pb-3 pt-3">
+          <QuoteContainer />
         </div>
       </div>
     </div>
