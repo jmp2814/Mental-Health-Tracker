@@ -1,8 +1,10 @@
 import React from "react";
+import "./help.css";
+import "../fonts/Nunito_Sans/NunitoSans-Regular.ttf";
 
 export default function Help() {
   return (
-    <div className="card d-flex align-items-center text-center w-70 mt-3 pt-3 pb-3">
+    <div className="card d-flex align-items-center text-center w-70 mt-3 pt-3 pb-3 Standard-Font">
       <h1 className="mb-3">Resources:</h1>
 
       <div className="">

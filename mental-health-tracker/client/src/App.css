@@ -7,6 +7,11 @@
   src: url("./public/fonts/Nunito_Sans/NunitoSans-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Nunito";
+  src: url("../fonts/Nunito_Sans/NunitoSans-Regular.ttf");
+};
+
 .App {
   text-align: center;
 }

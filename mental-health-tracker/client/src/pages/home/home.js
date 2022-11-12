@@ -1,9 +1,11 @@
 import React from "react";
 import QuoteContainer from "../Components/quote";
+import "./home.css";
+import "../fonts/Nunito_Sans/NunitoSans-Regular.ttf";
 
 export default function Home() {
   return (
-    <div className="d-flex align-items-center text-center Box card w-100 mt-3 pt-3 pb-3">
+    <div className="d-flex align-items-center text-center Box card w-100 mt-3 pt-3 pb-3 Standard-Font">
       <h1>Here With You</h1>
       <h3>Mental Health Tracking</h3>
       <div className="">

@@ -13,3 +13,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: "Nunito";
+  src: url("./pages/fonts/Nunito_Sans/NunitoSans-Regular.ttf");
+};
