@@ -1,6 +1,7 @@
 import { useMutation } from "@apollo/client";
 import React, { FormEvent, useState } from "react";
 import { ADD_RESPONSE } from "../../utils/mutations";
+import "../fonts/Nunito_Sans/NunitoSans-Regular.ttf";
 
 const EntryForm = () => {
   const [depression, setDepression] = useState(3);
@@ -128,11 +129,11 @@ const EntryForm = () => {
             ></input>
           </div>
 
-          <div class="input-group input-group-sm mb-3">
+          <div class="input-group input-group-sm mb-3 mt-3 ps-3">
             <label class="form-label">
               How many hours did you sleep last night?
             </label>
-            <span class="input-group-text" id="inputGroup-sizing-sm">
+            <span class="input-group-text" id="inputGroup-sizing-sm w-10 ps-3">
               Hours:
             </span>
             <input

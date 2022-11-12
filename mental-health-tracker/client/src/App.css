@@ -2,6 +2,11 @@
   --bs-body-bg: #539D8B;
 }
 
+@font-face {
+  font-family: "Light";
+  src: url("./public/fonts/Nunito_Sans/NunitoSans-Regular.ttf");
+}
+
 .App {
   text-align: center;
 }
