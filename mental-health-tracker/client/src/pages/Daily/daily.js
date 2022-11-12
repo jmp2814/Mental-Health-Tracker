@@ -2,6 +2,7 @@ import { useMutation } from "@apollo/client";
 import React, { FormEvent, useState } from "react";
 import { ADD_RESPONSE } from "../../utils/mutations";
 import "../fonts/Nunito_Sans/NunitoSans-Regular.ttf";
+import "./daily.css";
 
 const EntryForm = () => {
   const [depression, setDepression] = useState(3);
@@ -46,11 +47,11 @@ const EntryForm = () => {
   };
 
   return (
-    <div className="d-flex align-items-center text-center card w-100 mt-2 mb-3 pt-3 pb3">
+    <div className="d-flex align-items-center text-center card w-100 mt-2 mb-3 pt-3 pb3 Standard-Font">
       <main className={"w-50 m-auto p-2"}>
         <form onSubmit={handleFormSubmit}>
           <div>
-            <label for="customRange1" class="form-label">
+            <label for="customRange1" class="form-label Standard-Font">
               How depressed did you feel today?
             </label>
             <input
