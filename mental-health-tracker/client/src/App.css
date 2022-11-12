@@ -12,6 +12,11 @@
   src: url("../fonts/Nunito_Sans/NunitoSans-Regular.ttf");
 };
 
+@font-face {
+  font-family: "Caveat";
+  src: url("../fonts/Caveat/static/Caveat-Bold.ttf");
+}
+
 .App {
   text-align: center;
 }
