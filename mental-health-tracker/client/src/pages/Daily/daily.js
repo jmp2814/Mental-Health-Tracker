@@ -6,42 +6,77 @@ const recordData = () => {
   };
 
   return (
-    <div className="d-flex align-items-center text-center card w-50 mt-2 mb-3 pt-3 pb3">
-      <main className={"w-100 m-auto p-2"}>
+    <div className="d-flex align-items-center text-center card w-100 mt-2 mb-3 pt-3 pb3">
+      <main className={"w-50 m-auto p-2"}>
         <form onSubmit={handleFormSubmit}>
           <div>
             <label for="customRange1" class="form-label">
               How depressed did you feel today?
             </label>
-            <input type="range" class="form-range" id="customRange1"></input>
+            <input
+              type="range"
+              class="form-range"
+              min="1"
+              max="5"
+              step="1"
+              id="customRange1"
+            ></input>
           </div>
 
           <div>
             <label for="customRange1" class="form-label">
               How happy did you feel today?
             </label>
-            <input type="range" class="form-range" id="customRange1"></input>
+            <input
+              type="range"
+              class="form-range"
+              min="1"
+              max="5"
+              step="1"
+              id="customRange1"
+            ></input>
           </div>
 
           <div>
             <label for="customRange1" class="form-label">
               How anxious did you feel today?
             </label>
-            <input type="range" class="form-range" id="customRange1"></input>
+            <input
+              type="range"
+              class="form-range"
+              min="1"
+              max="5"
+              step="1"
+              id="customRange1"
+            ></input>
           </div>
 
           <div>
             <label for="customRange1" class="form-label">
               How irritable did you feel today?
             </label>
-            <input type="range" class="form-range" id="customRange1"></input>
+            <input
+              type="range"
+              class="form-range"
+              min="1"
+              max="5"
+              step="1"
+              id="customRange1"
+            ></input>
           </div>
 
           <div>
             <label for="customRange1" class="form-label">
               How was your appetite today?
             </label>
-            <input type="range" class="form-range" id="customRange1"></input>
+            <input
+              type="range"
+              class="form-range"
+              min="1"
+              max="5"
+              step="1"
+              id="customRange1"
+            ></input>
           </div>
 
           <div class="input-group input-group-sm mb-3">
