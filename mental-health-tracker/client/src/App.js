@@ -4,7 +4,8 @@ import {
   InMemoryCache,
   ApolloProvider,
   createHttpLink,
-} from "@apollo/client";
+}
+  from "@apollo/client";
 import { setContext } from "@apollo/client/link/context";
 
 import Layout from "./pages/Layout/Layout";
@@ -41,12 +42,12 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Layout />}>
-            <Route path="/home" element={<Home />} />
-            <Route path="/profile/:id" element={<Profile />} />
-            <Route path="/help" element={<Help />} />
+            <Route path="/" element={<Home />} />
             <Route path="/signup" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/todayentry" element={<RecordData />} />
+            <Route path="/help" element={<Help />} />
+            <Route path="/profile/:id" element={<Profile />} />
+            <Route path="/today" element={<RecordData />} />
           </Route>
         </Routes>
       </Router>
