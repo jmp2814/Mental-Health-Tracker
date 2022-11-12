@@ -22,10 +22,10 @@ class Header extends React.Component {
             <Link to="signup" className="btn btn-sm bg-light">
               Sign Up
             </Link>
-            <Link to="profile" className="btn btn-sm bg-light">
+            <Link to="/profile" className="btn btn-sm bg-light">
               Profile
             </Link>
-            <Link to="today" className="btn btn-sm bg-light">
+            <Link to="/today" className="btn btn-sm bg-light">
               Entry List
             </Link>
             <Link to="/help" className="btn btn-sm bg-danger btn-outline-light">
@@ -34,13 +34,9 @@ class Header extends React.Component {
             <Link to="/login" className="btn btn-sm bg-light">
               Login
             </Link>
-            <Link to="today" className="btn btn-sm bg-light">
-              Daily Entry
-            </Link>
             <Link to="logout" className="btn btn-sm bg-light">
               Log Out
             </Link>
-
           </div>
         </header>
       </>
