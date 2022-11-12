@@ -18,15 +18,24 @@ const Login = (props) => {
     });
   };
 
+  let loggedInUserId = "";
   const handleFormSubmit = async (event) => {
     event.preventDefault();
     console.log(formState);
     try {
       const { data } = await login({
-        variables: { ...formState },
+        variables: {
+          firstName: formState.firstName,
+          lastName: formState.lastName,
+          email: formState.email,
+          password: formState.password,
+        },
       });
 
       Auth.login(data.login.token);
+      loggedInUserId = data.login.user._id;
+      console.log(data);
+      window.location.assign(`/profile/${loggedInUserId}`);
     } catch (e) {
       console.error(e);
     }
@@ -38,9 +47,9 @@ const Login = (props) => {
     });
   };
 
-  if (data) {
-    return <Navigate to="/profile" />;
-  }
+  // if (data) {
+  //   return <Navigate to="/profile" />;
+  // }
   return (
     <div className="d-flex align-items-center text-center Box card w-100 mt-3 pt-3 pb-3">
       <main className={`w-50 m-auto p-2`}>
