@@ -13,6 +13,10 @@ export default function Home() {
         </div>
       </div>
 
+      <div>
+        <img src="./hugging.jpg" alt="people hugging"></img>
+      </div>
+
       <div className="">
         <div className="">
           <QuoteContainer />
@@ -24,7 +28,7 @@ export default function Home() {
         </div>
       </div>
       <div className="">
-        <div className="w-50 ">
+        <div className="w-50 container">
           <h3 className="col-12">How it works:</h3>
           <p className="col-12">
             Each day you log in, you will be prompted to answer a few questions
