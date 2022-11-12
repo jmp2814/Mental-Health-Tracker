@@ -1,7 +1,7 @@
 import { useMutation } from "@apollo/client";
 import React, { FormEvent, useState } from "react";
 import { ADD_RESPONSE } from "../../utils/mutations";
-import "././public/fonts/Nunito_Sans/NunitoSans-Regular.ttf";
+import "../fonts/Nunito_Sans/NunitoSans-Regular.ttf";
 
 const EntryForm = () => {
   const [depression, setDepression] = useState(3);
