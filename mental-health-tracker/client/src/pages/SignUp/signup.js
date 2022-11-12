@@ -1,89 +1,123 @@
-import React, { FormEvent, useState } from "react";
+import React, { useState } from "react";
+import { Link, Navigate } from "react-router-dom";
+import { useMutation } from "@apollo/client";
+import { ADD_USER } from "../../utils/mutations";
+import Auth from "../../utils/auth";
 
-const SignUp = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [firstname, setFirstname] = useState("");
-  const [lastname, setLastname] = useState("");
-  const handleEmailChange = (e) => {
-    setEmail(e.currentTarget.value);
-  };
+const Signup = () => {
+  const [formState, setFormState] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+  });
+  const [addUser, { error, data }] = useMutation(ADD_USER);
 
-  const handlePasswordChange = (e) => {
-    setPassword(e.currentTarget.value);
-  };
+  const handleChange = (event) => {
+    const { name, value } = event.target;
 
-  const handleFirstnameChange = (e) => {
-    setFirstname(e.currentTarget.value);
-  };
-  const handleLastnameChange = (e) => {
-    setLastname(e.currentTarget.value);
-  };
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    setEmail("");
-    setPassword("");
+    setFormState({
+      ...formState,
+      [name]: value,
+    });
   };
 
+  let loggedInUserId = "";
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+    console.log(formState);
+
+    try {
+      const { data } = await addUser({
+        variables: {
+          firstName: formState.firstName,
+          lastName: formState.lastName,
+          email: formState.email,
+          password: formState.password,
+        },
+      });
+
+      console.log(data);
+
+      Auth.login(data.addUser.token);
+      loggedInUserId = data.addUser.user._id;
+      console.log(loggedInUserId);
+      window.location.assign(`/profile/${loggedInUserId}`);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  // if (loggedInUserId) {
+  //   // return <Navigate to={`/profile/${loggedInUserId}`} />;
+  //   return <Navigate to="/login" />;
+  // }
   return (
     <div className="d-flex align-items-center text-center">
       <main className={`w-100 m-auto p-2`}>
-        <form onSubmit={handleFormSubmit}>
-          <h1 className="h3 mb-3 fw-normal">Sign Up:</h1>
-          <div className="form-floating mb-2">
-            <input
-              type="email"
-              value={email}
-              name="email"
-              id="email"
-              placeholder="email@email.com"
-              onChange={handleEmailChange}
-              className="form-control"
-            />
-            <label htmlFor="email">Email address:</label>
-          </div>
-          <div className="form-floating mb-2">
-            <input
-              type="password"
-              value={password}
-              name="password"
-              id="password"
-              placeholder="password"
-              onChange={handlePasswordChange}
-              className="form-control"
-            />
-            <label htmlFor="password">Password:</label>
-          </div>
-          <div className="form-floating mb-2">
-            <input
-              type="firstname"
-              value={firstname}
-              name="firstname"
-              id="firstname"
-              placeholder="firstname"
-              onChange={handleFirstnameChange}
-              className="form-control"
-            />
-            <label htmlFor="firstname">Firstname:</label>
-          </div>
-          <div className="form-floating mb-2">
-            <input
-              type="lastname"
-              value={lastname}
-              name="lastname"
-              id="lastname"
-              placeholder="lastname"
-              onChange={handleLastnameChange}
-              className="form-control"
-            />
-            <label htmlFor="lastname">Lastname:</label>
-          </div>
-          <button type="submit" className="w-100 btn btn-lg btn-primary">
-            Sign Up
-          </button>
-        </form>
+        {data ? (
+          <p>
+            Success! You may now head <Link to="/">back to the homepage.</Link>
+          </p>
+        ) : (
+          <form onSubmit={handleFormSubmit}>
+            <h1 className="h3 mb-3 fw-normal">Sign Up:</h1>
+            <div className="form-floating mb-2">
+              <input
+                type="email"
+                value={formState.email}
+                name="email"
+                id="email"
+                placeholder="email@email.com"
+                onChange={handleChange}
+                className="form-control"
+              />
+              <label htmlFor="email">Email address:</label>
+            </div>
+            <div className="form-floating mb-2">
+              <input
+                type="password"
+                value={formState.password}
+                name="password"
+                id="password"
+                placeholder="password"
+                onChange={handleChange}
+                className="form-control"
+              />
+              <label htmlFor="password">Password:</label>
+            </div>
+            <div className="form-floating mb-2">
+              <input
+                type="firstname"
+                value={formState.firstName}
+                name="firstName"
+                id="firstname"
+                placeholder="firstname"
+                onChange={handleChange}
+                className="form-control"
+              />
+              <label htmlFor="firstname">Firstname:</label>
+            </div>
+            <div className="form-floating mb-2">
+              <input
+                type="lastname"
+                value={formState.lastName}
+                name="lastName"
+                id="lastname"
+                placeholder="lastname"
+                onChange={handleChange}
+                className="form-control"
+              />
+              <label htmlFor="lastname">Lastname:</label>
+            </div>
+            <button type="submit" className="w-100 btn btn-lg btn-primary">
+              Sign Up
+            </button>
+          </form>
+        )}
       </main>
     </div>
   );
 };
-export default SignUp;
+
+export default Signup;
