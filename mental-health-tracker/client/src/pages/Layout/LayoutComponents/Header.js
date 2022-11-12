@@ -11,7 +11,7 @@ class Header extends React.Component {
             <div className="col-6 text-center">
               <Link to="/" className="navbar-brand">
                 <img
-                  src="./HWYAbrvtd5.png"
+                  src="./HereWithYou-1.png"
                   alt="logo"
                   className={`${styles.Logo}`}
                 />
@@ -19,16 +19,13 @@ class Header extends React.Component {
             </div>
           </div>
           <div className={`${styles.navbar}`}>
-            <Link to="signup" className="btn btn-sm btn-outline-secondary">
+            <Link to="signup" className="btn btn-sm bg-light">
               Sign Up
             </Link>
-            <Link
-              to="/help"
-              className="btn btn-sm btn-info btn-outline-secondary"
-            >
+            <Link to="/help" className="btn btn-sm bg-danger btn-outline-light">
               Need Help Now
             </Link>
-            <Link to="/login" className="btn btn-sm btn-outline-secondary">
+            <Link to="/login" className="btn btn-sm bg-light">
               Login
             </Link>
           </div>
