@@ -37,6 +37,9 @@ class Header extends React.Component {
             <Link to="logout" className="btn btn-sm bg-light">
               Log Out
             </Link>
+            <Link to="today" className="btn btn-sm bg-light">
+              Daily Entry
+            </Link>
           </div>
         </header>
       </>
