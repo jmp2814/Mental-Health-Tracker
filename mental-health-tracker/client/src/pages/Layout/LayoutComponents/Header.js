@@ -31,14 +31,14 @@ class Header extends React.Component {
             <Link to="/help" className="btn bg-light text">
               Need Help Now
             </Link>
+            <Link to="today" className="btn btn-sm bg-light">
+              Daily Entry
+            </Link>
             <Link to="/login" className="btn btn-sm bg-light">
               Login
             </Link>
             <Link to="logout" className="btn btn-sm bg-light">
               Log Out
-            </Link>
-            <Link to="today" className="btn btn-sm bg-light">
-              Daily Entry
             </Link>
           </div>
         </header>
