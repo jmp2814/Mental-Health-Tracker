@@ -1,6 +1,8 @@
+import { useMutation } from "@apollo/client";
 import React, { FormEvent, useState } from "react";
+import { ADD_RESPONSE } from "../../utils/mutations";
 
-const recordData = () => {
+const EntryForm = () => {
   const [depression, setDepression] = useState(3);
   const [happy, setHappy] = useState(3);
   const [anxiety, setAnxiety] = useState(3);
@@ -8,9 +10,38 @@ const recordData = () => {
   const [appetite, setAppetite] = useState(3);
   const [sleep, setSleep] = useState(0);
   const [medication, setMedication] = useState("");
+  const [addResponse, { error, data }] = useMutation(ADD_RESPONSE);
 
-  const handleFormSubmit = (e) => {
-    console.log(e);
+  const recordData = (event) => {
+    const { name, value } = event.target;
+
+    setDepression(value.depression);
+    setHappy(value.happy);
+    setAnxiety(value.anxiety);
+    setIrritable(value.irritable);
+    setAppetite(value.appetite);
+    setSleep(value.sleep);
+    setMedication(value.medication);
+  };
+
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
+
+    try {
+      const { data } = await addResponse({
+        variables: {
+          depressionScale: depression,
+          happyScale: happy,
+          anxiousScale: anxiety,
+          irritableScale: irritable,
+          appetiteScale: appetite,
+          sleepHours: sleep,
+          medicationCheck: medication,
+        },
+      });
+    } catch (err) {
+      console.error(err);
+    }
   };
 
   return (
@@ -158,4 +189,4 @@ const recordData = () => {
   );
 };
 
-export default recordData;
+export default EntryForm;
